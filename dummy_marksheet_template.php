@@ -211,14 +211,14 @@ SGPI-Semester Grade Performance Index, CGPI-Cummulative Grade Performance Index,
 </pre>
 
 
-                <input type="button" value="Print" class="btn" onclick="PrintDoc()"/>
+               <!--  <input type="button" value="Print" class="btn" onclick="PrintDoc()"/>
 
 
                 <input type="button" value="Print Preview" class="btn" onclick="PrintPreview()"/>
 
-                <input type="button" value="Logout" class="btn" onclick="window.location='http://localhost/AEM/Sdg-RAIT/staff.php'"/>
+                <input type="button" value="Logout" class="btn" onclick="window.location='http://localhost/AEM/Sdg-RAIT/staff.php'"/> -->
 
- 
+ <input type="button" value="Logout" onclick="window.location='http://localhost/SDG-RAIT/staff.php'">
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
