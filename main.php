@@ -26,7 +26,7 @@
       <a href="three_buttons.php">Three Buttons</a>
       <a href="staff.php">Staff</a>
       <a href="internal_login.php">Internal Login</a>
-      <!-- <a href="#">Contact</a> -->
+      <a href="hallticket.php">Hall Ticket</a>
     </div>
 
     <div id="main">

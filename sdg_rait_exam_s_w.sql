@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2018 at 06:18 AM
+-- Generation Time: Sep 24, 2018 at 07:56 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -403,6 +403,31 @@ INSERT INTO `course_table_rev` (`branch`, `pattern`, `sem`, `subject`, `Sub_code
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `data`
+--
+
+CREATE TABLE `data` (
+  `Seat No.` int(200) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Branch` varchar(10) NOT NULL,
+  `Year` varchar(2) NOT NULL,
+  `Sem` varchar(2) NOT NULL,
+  `Roll No.` varchar(8) NOT NULL,
+  `photo` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data`
+--
+
+INSERT INTO `data` (`Seat No.`, `Name`, `Branch`, `Year`, `Sem`, `Roll No.`, `photo`) VALUES
+(1, 'SAWANT MITESH MILIND MANALI', 'Computer', 'SE', 'IV', '16CE1088', 'images\\16CE1088.jpg'),
+(2, 'surname name father mother', 'Computer', 'SE', 'IV', '16CE1077', 'images\\16CE1077.jpg'),
+(3, 'surname name father mother', 'computer', 'SE', 'IV', '16CE1056', 'images\\16CE1056.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dummy_course_table_rev`
 --
 
@@ -509,32 +534,35 @@ INSERT INTO `dummy_theory_marks` (`branch`, `sem`, `seat_no`, `unique_code`, `su
 --
 
 CREATE TABLE `final` (
+  `Roll_no` varchar(10) NOT NULL,
   `seat` varchar(30) DEFAULT NULL,
   `subcode` varchar(30) DEFAULT NULL,
   `ese` varchar(30) DEFAULT NULL,
   `op` varchar(30) DEFAULT NULL,
   `oral` varchar(30) DEFAULT NULL,
   `ia` varchar(30) DEFAULT NULL,
-  `tw` varchar(30) DEFAULT NULL
+  `tw` varchar(30) DEFAULT NULL,
+  `o_ese` int(30) NOT NULL,
+  `o_tw` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `final`
 --
 
-INSERT INTO `final` (`seat`, `subcode`, `ese`, `op`, `oral`, `ia`, `tw`) VALUES
-('4000', '400', '50', '20', '-', '16', '20'),
-('4000', '401', '50', '-', '-', '16', '20'),
-('4000', '402', '50', '20', '-', '16', '20'),
-('4000', '403', '50', '-', '20', '16', '20'),
-('4000', '404', '50', '20', '-', '16', '20'),
-('4000', '405', '50', '-', '-', '16', '-'),
-('4001', '400', '', '20', '-', '16', '20'),
-('4001', '401', '', '-', '-', '16', '20'),
-('4001', '402', '', '20', '-', '16', '20'),
-('4001', '403', '', '-', '20', '16', '20'),
-('4001', '404', '', '20', '-', '16', '20'),
-('4001', '405', '', '-', '-', '16', '-');
+INSERT INTO `final` (`Roll_no`, `seat`, `subcode`, `ese`, `op`, `oral`, `ia`, `tw`, `o_ese`, `o_tw`) VALUES
+('15CE7033', '4000', '400', '50', '20', '10', '15', '20', 0, 0),
+('15CE7033', '4000', '401', '50', '20', '10', '15', '20', 10, 10),
+('15CE7033', '4000', '402', '50', '20', '10', '15', '20', 10, 10),
+('15CE7033', '4000', '403', '50', '20', '10', '15', '20', 10, 10),
+('15CE7033', '4000', '404', '50', '20', '10', '15', '20', 10, 10),
+('15CE7033', '4000', '405', '50', '20', '10', '15', '20', 10, 10),
+('15CE1044', '4001', '400', '50', '20', '10', '20', '10', 0, 0),
+('15CE1044', '4001', '401', '40', '-', '-', '15', '20', 0, 0),
+('15CE1044', '4001', '402', '40', '20', '-', '15', '20', 0, 0),
+('15CE1044', '4001', '403', '40', '-', '20', '15', '20', 0, 0),
+('15CE1044', '4001', '404', '40', '20', '-', '15', '20', 0, 0),
+('15CE1044', '4001', '405', '40', '-', '-', '15', '-', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -565,6 +593,32 @@ INSERT INTO `link_dummy_theory_marks` (`branch`, `sem`, `seat_no`, `unique_code`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `map`
+--
+
+CREATE TABLE `map` (
+  `dept` varchar(30) NOT NULL,
+  `sem` varchar(30) NOT NULL,
+  `ccode` varchar(30) NOT NULL,
+  `ucode` int(30) NOT NULL,
+  `seat` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `map`
+--
+
+INSERT INTO `map` (`dept`, `sem`, `ccode`, `ucode`, `seat`) VALUES
+('CE', '4', 'CPC312', 1, '5311'),
+('CE', '4', 'REV2012', 2, '4411'),
+('CE', '4', 'CPC312', 3, '3444'),
+('CE', '4', 'CPC312', 4, '4333'),
+('CE', '4', 'REV2012', 5, '2211'),
+('CE', '4', 'CPC312', 6, '2332');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sc_400`
 --
 
@@ -585,8 +639,33 @@ CREATE TABLE `sc_400` (
 --
 
 INSERT INTO `sc_400` (`Roll_no`, `full_name`, `ESE`, `OP`, `ORAL`, `IA`, `TW`, `OVERALL_ESE`, `OVERALL_TW`) VALUES
-('15CE7033', 'BHUJBAL ASHUTOSH SANJEEV', '80', '20', '20', '20', '25', '100', '25'),
-('15CE1044', 'Rohit Patil', '0', '0', '0', '0', '0', '0', '0');
+('15CE1044', 'Rohit Patil', '', '', '', '46', '', '', ''),
+('15CE7033', 'BHUJBAL ASHUTOSH SANJEEV', '', '', '', '20', '', '', ''),
+('15CE1078', 'Dheeraj Mishra', '', '', '', '34', '', '', ''),
+('15CE7012', 'Shubham Sharma', '', '', '', '30', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `search`
+--
+
+CREATE TABLE `search` (
+  `Seat_No` varchar(50) NOT NULL,
+  `Roll_No` varchar(50) NOT NULL,
+  `Branch` varchar(50) NOT NULL,
+  `Semester` varchar(50) NOT NULL,
+  `Pattern` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `search`
+--
+
+INSERT INTO `search` (`Seat_No`, `Roll_No`, `Branch`, `Semester`, `Pattern`) VALUES
+('2211', '15CE7033', 'CE', '2', 'REV2012'),
+('2211', '15CE7033', 'CE', '4', 'REV2012'),
+('2211', '15CE7033', 'CE', '4', 'REV2012');
 
 -- --------------------------------------------------------
 
@@ -652,7 +731,7 @@ INSERT INTO `student_details_copy` (`Roll_no`, `Branch`, `Fullname`, `Pattern`) 
 --
 
 CREATE TABLE `student_final_marksheet` (
-  `seat` varchar(30) DEFAULT NULL,
+  `seat` varchar(30) NOT NULL,
   `Roll_no` varchar(30) DEFAULT NULL,
   `Sem` varchar(30) DEFAULT NULL,
   `branch` varchar(30) DEFAULT NULL,
@@ -682,24 +761,26 @@ CREATE TABLE `student_final_marksheet` (
 --
 
 INSERT INTO `student_final_marksheet` (`seat`, `Roll_no`, `Sem`, `branch`, `full_name`, `pattern`, `exam_yr`, `Sub_code`, `course_credits_th`, `course_credits_tw`, `grade_ese`, `grade_oralprac`, `grade_oral`, `grade_ia`, `grade_tw`, `overall_ese`, `overall_tw`, `creditsearned_th`, `creditsearned_tw`, `gradepoints_th`, `gradepoints_tw`, `cxg_th`, `cxg_tw`) VALUES
-('47', NULL, NULL, 'CE', 'SUDRIK PRAMOD RAMESHRAO', '', 'NOV\'09', '123456', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
-('6506', NULL, NULL, 'IT', 'RANAWARE SATYAJIT SHIVAJIRAO', '', 'NOV-13', '123456', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('552', NULL, NULL, 'CE', 'MHATRE MAYURESH MADHUKAR', '', 'MAY-15', '123456', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('8067', '00CE166', '6', 'CE', 'SUDRIK PRAMOD RAMESHRAO', '', 'MAY-10', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '0', '0', '0'),
-('8062', '00CE194', '6', 'CE', 'MALGAONKAR JAYESH PANDURANG', '', 'MAY-10', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('26', '00CE224', '6', 'CE', 'KHOBRAGADE NITIN ARUN', '', 'NOV\'09', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('1072', '00EE128', '5', 'ET', 'THANIYAT ASHISH MURALI', '', 'NOV\'09', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 ('1103', '01IN010', '3', 'IN', 'GAVANDI TEJAS SUHAS', '', 'NOV\'09', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 ('1120', '01IN021', '5', 'IN', 'NINGAVALE ROHIT ANANT', '', 'NOV\'09', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('6', '02CE1005', '6', 'CE', 'BHERE TUSHAR  KANHU', '', 'NOV\'09', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('1072', '00EE128', '5', 'ET', 'THANIYAT ASHISH MURALI', '', 'NOV\'09', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('1159', '00IT162', '5', 'IT', 'SAWANT TUSHAR ANIL', '', 'NOV\'09', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('6057', '01EE024', '5', 'ET', 'KANINDE SATYASHIL GOVIND', '', 'MAY-10', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('4927', '01ET126', '7', 'EX', 'SURI ASEEM VINOD', '', 'NOV-15', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 ('1122', '02CE1010', '5', 'CE', 'DIXIT ABHIJIT BRAHMKUMAR', '', 'MAY-11', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('1159', '00IT162', '5', 'IT', 'SAWANT TUSHAR ANIL', '', 'NOV\'09', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 ('2000', '15CE7033', '2', 'CE', 'BHUJBAL ASHUTOSH SANJEEV', '', 'MAY-16', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('26', '00CE224', '6', 'CE', 'KHOBRAGADE NITIN ARUN', '', 'NOV\'09', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('4000', '15CE1044', '4', 'CE', 'Rohit Patil', 'REV2012', 'MAY17', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 ('4001', '15CE7033', '4', 'CE', 'BHUJBAL ASHUTOSH SANJEEV', 'REV2012', 'MAY-17', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('4000', '15CE1044', '4', 'CE', 'Rohit Patil', 'REV2012', 'MAY17', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('4002', '15CE1078', '4', 'CE', 'Dheeraj Mishra', 'REV2012', 'MAY-17', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 ('4004', '15CE7012', '4', 'CE', 'Shubham Sharma', 'REV2012', 'MAY-17', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('47', NULL, NULL, 'CE', 'SUDRIK PRAMOD RAMESHRAO', '', 'NOV\'09', '123456', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+('4927', '01ET126', '7', 'EX', 'SURI ASEEM VINOD', '', 'NOV-15', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('552', NULL, NULL, 'CE', 'MHATRE MAYURESH MADHUKAR', '', 'MAY-15', '123456', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('6', '02CE1005', '6', 'CE', 'BHERE TUSHAR  KANHU', '', 'NOV\'09', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('6057', '01EE024', '5', 'ET', 'KANINDE SATYASHIL GOVIND', '', 'MAY-10', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('6506', NULL, NULL, 'IT', 'RANAWARE SATYAJIT SHIVAJIRAO', '', 'NOV-13', '123456', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('8062', '00CE194', '6', 'CE', 'MALGAONKAR JAYESH PANDURANG', '', 'MAY-10', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+('8067', '00CE166', '6', 'CE', 'SUDRIK PRAMOD RAMESHRAO', '', 'MAY-10', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '0', '0', '0');
+
 -- --------------------------------------------------------
 
 --
@@ -826,6 +907,33 @@ CREATE TABLE `student_theory_unmask` (
   `seat` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `th_mks`
+--
+
+CREATE TABLE `th_mks` (
+  `dept` varchar(30) NOT NULL,
+  `sem` varchar(30) NOT NULL,
+  `ccode` varchar(30) NOT NULL,
+  `ucode` int(30) NOT NULL,
+  `marks` varchar(30) NOT NULL,
+  `seat` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `th_mks`
+--
+
+INSERT INTO `th_mks` (`dept`, `sem`, `ccode`, `ucode`, `marks`, `seat`) VALUES
+('CE', '4', 'CPC312', 1, '32', '5311'),
+('CE', '4', 'REV2012', 2, '65', '4411'),
+('CE', '4', 'CPC312', 3, '45', '3444'),
+('CE', '4', 'CPC312', 4, '56', '4333'),
+('CE', '4', 'REV2012', 5, '32', '2211'),
+('CE', '4', 'CPC312', 6, '35', '2332');
+
 --
 -- Indexes for dumped tables
 --
@@ -861,6 +969,12 @@ ALTER TABLE `link_dummy_theory_marks`
   ADD PRIMARY KEY (`unique_code`);
 
 --
+-- Indexes for table `map`
+--
+ALTER TABLE `map`
+  ADD PRIMARY KEY (`ucode`);
+
+--
 -- Indexes for table `student_cgpi`
 --
 ALTER TABLE `student_cgpi`
@@ -871,6 +985,12 @@ ALTER TABLE `student_cgpi`
 --
 ALTER TABLE `student_details`
   ADD PRIMARY KEY (`Roll_no`,`Branch`);
+
+--
+-- Indexes for table `student_final_marksheet`
+--
+ALTER TABLE `student_final_marksheet`
+  ADD PRIMARY KEY (`seat`);
 
 --
 -- Indexes for table `student_marks`
@@ -895,7 +1015,27 @@ ALTER TABLE `student_theory_mask`
 --
 ALTER TABLE `student_theory_unmask`
   ADD PRIMARY KEY (`code`);
-COMMIT;
+
+--
+-- Indexes for table `th_mks`
+--
+ALTER TABLE `th_mks`
+  ADD PRIMARY KEY (`ucode`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `map`
+--
+ALTER TABLE `map`
+  MODIFY `ucode` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `th_mks`
+--
+ALTER TABLE `th_mks`
+  MODIFY `ucode` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

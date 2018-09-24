@@ -139,7 +139,7 @@ else{?>
     $_SESSION['pattern']=$z;
     }
 ?>    <center>
-<input type="button" value="Back" class="btn" onclick="window.location='http://localhost/AEM/three_buttons.php'"/>
+<input type="button" value="Back" class="btn" onclick="window.location='http://localhost/SDG-RAIT/three_buttons.php'"/>
 </center>
 </body>
 </html>

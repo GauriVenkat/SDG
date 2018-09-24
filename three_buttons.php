@@ -37,13 +37,30 @@ if (pattern==null || pattern==""){
 
 }  
 </script>
+<style>
+
+input[type=button] {
+    width: 30%;
+    background-color: #8B0000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #45a049;
+}
+</style>
 </head>
 
 <body>
 
 <h3 style="text-align: left; color: #8B0000; font-family: Arial; font-size: 36px;"><center>Select a task</center></h3>
 
-<div class="center" >
+<div align="center" >
   <form name="myform" method="POST" onsubmit="return validateform()" >  
 <input type="button" class="btn"  value="Enter Theory marks" onclick="window.location='http://localhost/SDG-RAIT/theory_marks.php'"><br/>  
 <input type="button" class="btn" value="Enter Seat Numbers" onclick="window.location='http://localhost/SDG-RAIT/seat.php'"><br/> 
@@ -58,34 +75,3 @@ if (pattern==null || pattern==""){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- @Rohit Patil-->

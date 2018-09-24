@@ -66,7 +66,8 @@ $records = mysqli_query($db,$sql);
 		 
        
        ?>
-		<img src="<?php echo  $data['photo'];?>" height="100" width="100" align="right"><style align="right"><?php echo $data['Roll No.'];?></style>
+		<img src="<?php echo  $data['photo'];?>" height="100" width="100" align="right">
+		<style align="right"><?php echo $data['Roll No.'];?></style>
 	   <textarea style="width:200px;height:30px"></textarea>
 	   <br>
 	    signature of Candidate<br>
