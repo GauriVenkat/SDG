@@ -87,7 +87,7 @@ input[type=submit]:hover,.btn:hover {
 div {
     width: 50%;
     height: 50%;
-    align: center;
+    align-content:  center;
     border-radius: 2px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -104,45 +104,68 @@ div {
 </style>
 <body>
 
-<h3 style="text-align: left; color: #8B0000; font-family: Arial; font-size: 36px;"><center>   Theory Entry </center>   </h3>
+<h3 style="text-align: left; color: #8B0000; font-family: Arial; font-size: 36px;"><center>Update Theory marks</center> </h3>
 
-<div class="center"><center>
-  <form name="myform" method="POST" onsubmit="return validateform()" >
-  
-Department: <input type="text" name="Departent" id="Departent" ><br/>  
-Semester:  <input type="text" name="sem" id="sem"><br/>  
-Course:    <input type="text" name="pattern" id="pattern"><br/>
+<div class="center">
+  <form name="myform" method="POST" onsubmit="return validateform()" > 
+Enter Unique code : <input type="text" name="ucode" id="ucoed" ><br/>
+Enter Seat Number: <input type="text" name="marks" id="marks" ><br/>  
 
-<input type="submit" value="Enter Theory Marks" id="LOGIN" name="LOGIN"">  
-</form> </center>    
+<input type="submit" value="Update" id="Update" name="Update"">  
+</form>  
 </div>
 
 <?php
-if(isset($_POST['LOGIN'])){
-  $r = $_POST['Departent'];
-  $q = $_POST['sem'];
-  $z = $_POST['pattern'];
+if(isset($_POST['Update'])){
+  $ucode = $_POST['ucode'];
+  $marks = $_POST['marks'];
 
- // $check = mysqli_query($db,"select * from th_mks where dept='$r' and sem='$q' and ccode='$z'");
+  $check = mysqli_query($db,"update map set seat=$marks where ucode=$ucode;");
 
-  
-
- //   if(mysqli_num_rows($check)>0){
- //    header("Location: enter_th_marks.php");
-  //  }
-//else{
-      $insert_into_th_mks=mysqli_query($db,"insert into th_mks(dept,sem,ccode) values('$r','$q','$z')") or die(mysqli_error($db)); ;
-      $insert_into_map=mysqli_query($db,"insert into map(dept,sem,ccode) values('$r','$q','$z')") or die(mysqli_error($db)); ;
-      header("Location: enter_th_marks.php");
-//  }
-    $_SESSION['Departent']=$r;
-    $_SESSION['sem']=$q;
-    $_SESSION['pattern']=$z;
+  echo ("<script LANGUAGE='JavaScript'>
+    window.alert('succesfully Updated');
+    </script>");
+     
     }
-?>    <center>
-<input type="button" value="Back" class="btn" onclick="window.location='http://localhost/SDG-RAIT/three_buttons.php'"/>
+?>    
+ <center>
+<input type="button" value="Back" class="btn" onclick="window.location='http://localhost/SDG-RAIT/enter_st_no.php'"/>
 </center>
 </body>
 </html>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- @Rohit Patil -->

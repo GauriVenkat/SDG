@@ -109,7 +109,7 @@ div {
 <div class="center"><center>
   <form name="myform" method="POST" onsubmit="return validateform()" >
   
-Departent: <input type="text" name="Departent" id="Departent" ><br/>  
+Department: <input type="text" name="Departent" id="Departent" ><br/>  
 Semester:  <input type="text" name="sem" id="sem"><br/>  
 Course:    <input type="text" name="pattern" id="pattern"><br/>
 

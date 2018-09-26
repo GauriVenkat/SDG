@@ -9,6 +9,9 @@ $records = mysqli_query($db,$sql);
  <head>
    <title>Hallticket</title>
    <style>
+   body{
+   	padding: 16px;
+   }
    h6 {
 	    color: black;
 		font-family: Blackadder ITC;
@@ -73,10 +76,10 @@ $records = mysqli_query($db,$sql);
 	    signature of Candidate<br>
 		<textarea style="width:200px;height:30px"></textarea>
 	   <br>
-	    signature of Principle&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	    Signature of Principal&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<?php echo $data['Roll No.'];?>
-		<center>Appearing for th following Theory Subjects<br>
+		<center>Appearing for the following Theory Subjects<br>
 	   <textarea style="width:30px;height:30px"></textarea>
 	    <textarea style="width:30px;height:30px"></textarea>
 		<textarea style="width:30px;height:30px"></textarea>
@@ -134,10 +137,10 @@ $records = mysqli_query($db,$sql);
 	    signature of Candidate<br>
 		<textarea style="width:200px;height:30px"></textarea>
 	   <br>
-	    signature of Principle&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	    Signature of Principal&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<?php echo $data['Roll No.'];?>
-		<center>Appearing for th following Theory Subjects<br>
+		<center>Appearing for the following Theory Subjects<br>
 	   <textarea style="width:30px;height:30px"></textarea>
 	    <textarea style="width:30px;height:30px"></textarea>
 		<textarea style="width:30px;height:30px"></textarea>

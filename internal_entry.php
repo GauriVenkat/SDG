@@ -154,21 +154,21 @@ $row = mysqli_fetch_array($query_marks);
       <tr>
       <td rowspan="3" width="300">Roll_No</td>
       <td rowspan="3" width="300">Name</td>
-      <td colspan="7">Grade</td>
+      <td colspan="4">Grade</td>
     </tr>
     <tr>
       
-      <td width="10" rowspan="2">ESE</td>
-      <td width="10" rowspan="2">OP</td>
-      <td width="23" rowspan="2">OR</td>
-      <td width="18" rowspan="2">IA</td>
-      <td width="24" rowspan="2">TW</td>
-      <td colspan="2">Overall</td>
+      <!-- <td width="10" rowspan="1">ESE</td> -->
+      <td width="10" rowspan="1">OP</td>
+      <td width="23" rowspan="1">OR</td>
+      <td width="18" rowspan="1">IA</td>
+      <td width="24" rowspan="1">TW</td>
+      <!-- <td colspan="2">Overall</td> -->
     </tr>
-    <tr>
+    <!-- <tr>
       <td colspan="1">ESE</td>
       <td colspan="1">TW</td>
-    </tr>
+    </tr> -->
 
 
     
