@@ -90,11 +90,17 @@ Semester:	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <select name="sem" i
   <option value="5">5</option>
   <option value="6">6</option>
 </select><br/>
-Enter Roll No:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="rollno" id="rollno"><br/>
-<input type="submit" value="Get MARKSHEET" id="LOGIN" name="LOGIN"">
+<!-- Enter Roll No:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="rollno" id="rollno"><br/> -->
+<input type="submit" value="Get MARKSHEET" id="LOGIN" name="LOGIN">
+</form>
+<br>
+<form method="POST" onsubmit="return validateform()" align="center" action="search_hall.php">
+  Enter Roll No:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="rollno" id="rollno"><br/>
+  <input type="submit" value="search" id="search" name="search">
 </form>
 </div>
 <div>
+
 </div>
 </body>
 </html>

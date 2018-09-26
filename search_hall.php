@@ -1,10 +1,9 @@
 <?php
 include 'connect.php';
 
-if(isset($_POST['LOGIN'])){
-  $branch = $_POST['branch'];
-  $sem = $_POST['sem'];
-$records = mysqli_query($db,"SELECT * FROM data where Branch='$branch' and Sem='$sem'") or die("Error: " . mysqli_error($db));;
+if(isset($_POST['search'])){
+  $roll = $_POST['rollno'];
+$records = mysqli_query($db,"SELECT * FROM data where RollNo='$roll'") or die("Error: " . mysqli_error($db));;
 if(mysqli_num_rows($records)<1){
 echo "<h2>No result found</h2>";
 }
