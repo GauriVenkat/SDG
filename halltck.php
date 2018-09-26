@@ -84,6 +84,13 @@ Branch: 	 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb
   <option value="ELEX">ELEX</option>
   <option value="INSTRU">INSTRU</option>
 </select><br/>
+Year: 	 		&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<select name="year" id="year">
+  <option value="FE">FE</option>
+  <option value="SE">SE</option>
+  <option value="TE">TE</option>
+  <option value="BE">BE</option>
+</select><br/>
 Semester:	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <select name="sem" id="sem">
   <option value="3">3</option>
   <option value="4">4</option>

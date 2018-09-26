@@ -4,7 +4,8 @@ include 'connect.php';
 if(isset($_POST['LOGIN'])){
   $branch = $_POST['branch'];
   $sem = $_POST['sem'];
-$records = mysqli_query($db,"SELECT * FROM data where Branch='$branch' and Sem='$sem'") or die("Error: " . mysqli_error($db));;
+  $year = $_POST['year'];
+$records = mysqli_query($db,"SELECT * FROM data where Branch='$branch' and Sem='$sem' and Year='$year'") or die("Error: " . mysqli_error($db));;
 if(mysqli_num_rows($records)<1){
 echo "<h2>No result found</h2>";
 }
