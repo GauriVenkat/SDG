@@ -76,10 +76,10 @@ input[type=submit]:hover {
 
 <div align="center" style="border: 2px solid #8B0000;margin: 0% 30%;" >
  <form name="myform" method="POST" onsubmit="return validateform()" >  
-Subject Code: &nbsp; <input type="text" name="subject_code" id="subject_code" value="400"><br/>
-Branch:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="branch" id="branch"  value="CE"><br/>  
-Semester:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="text" name="sem" id="sem" value="4"><br/>  
-Pattern: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pattern" id="pattern" value="REV2012"><br/>  
+Subject Code: &nbsp; <input type="text" name="subject_code" id="subject_code" ><br/>
+Branch:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="branch" id="branch"><br/>  
+Semester:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input type="text" name="sem" id="sem" ><br/>  
+Pattern: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pattern" id="pattern"><br/>  
 <input type="submit" value="Show Students" id="LOGIN" name="LOGIN"> 
  
 </form>  

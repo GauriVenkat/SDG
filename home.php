@@ -28,7 +28,7 @@
                 <div class="loginpanel">
                     <h2>Login</h2>
                     <div class="subcontent loginsub">
-                        <form action="main.php" method="post" id="login" >
+                        <form action="three_buttons.php" method="post" id="login" >
                             <div class="loginform">
                                 <!-- <div class="form-label"><label for="username">SDRN No</label></div>
                                  -->

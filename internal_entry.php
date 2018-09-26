@@ -49,7 +49,11 @@ $count = mysqli_num_rows($query);
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="css/Print.css">
     
+    <link rel="stylesheet" href="css/internal_entry.css">
+    
     <title>INTERNAL RESULT</title>
+
+  
 
     <script type="text/javascript">
 
@@ -152,8 +156,8 @@ $row = mysqli_fetch_array($query_marks);
             <tbody>
      
       <tr>
-      <td rowspan="3" width="300">Roll_No</td>
-      <td rowspan="3" width="300">Name</td>
+      <td rowspan="2" width="300">Roll_No</td>
+      <td rowspan="2" width="300">Name</td>
       <td colspan="4">Grade</td>
     </tr>
     <tr>
@@ -185,13 +189,10 @@ $row = mysqli_fetch_array($query_marks);
     <tr>
     <td> ". $course_row['Roll_no'] ."<input type = 'hidden'  name = 'Roll_no[]' value = '".$course_row['Roll_no']."' ></td>
     <td> ". $course_row['full_name']." <input type = 'hidden'  name = 'full_name[]' value = '".$course_row['full_name']."' ></td>
-    <td><input type='text' name='ese[]' id ='ese' size='02' value = '".$update_result[$i][2]."' ></td>
     <td><input type='text' name='op[]' id ='op' size='02' value = '".$update_result[$i][3]."'></td>
     <td><input type='text' name='oral[]' id = 'oral' size='02' value = '".$update_result[$i][4]."'></td>
     <td><input type='text' name='ia[]' id ='ia' size='02' value = '".$update_result[$i][5]."' ></td>
     <td><input type='text' name='tw[]' id = 'tw' size='02' value = '".$update_result[$i][6]."'></td>
-    <td><input type='text' name='overall_ese[]' id = 'overall_ese'  size='02' value = '".$update_result[$i][7]."'></td>
-    <td><input type='text' name='overall_tw[]' id = 'overall_tw' size='02' value = '".$update_result[$i][8]."'></td>
     </tr>";
     
 
@@ -203,13 +204,10 @@ $row = mysqli_fetch_array($query_marks);
     <tr>
     <td> ". $course_row['Roll_no'] ."<input type = 'hidden'  name = 'Roll_no[]' value = '".$course_row['Roll_no']."' ></td>
     <td> ". $course_row['full_name']." <input type = 'hidden'  name = 'full_name[]' value = '".$course_row['full_name']."' ></td>
-    <td><input type='text' name='ese[]' id ='ese' size='02'></td>
     <td><input type='text' name='op[]' id ='op' size='02'></td>
     <td><input type='text' name='oral[]' id = 'oral' size='02'></td>
     <td><input type='text' name='ia[]' id ='ia' size='02'></td>
     <td><input type='text' name='tw[]' id = 'tw' size='02'></td>
-    <td><input type='text' name='overall_ese[]' id = 'overall_ese'  size='02'></td>
-    <td><input type='text' name='overall_tw[]' id = 'overall_tw' size='02'></td>
     </tr>";
     
 
